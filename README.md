@@ -1,7 +1,1 @@
-# abcd
-
-
-ghjghg
-jghjgj
-hghjghjghj
-kavya
+# B-trees implementation in C
