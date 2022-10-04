@@ -1,12 +1,12 @@
 //Name: ASHIYA KANDHWAY ENTRY NO=2020mcb1231
 //All the following fucntions are implemented above main function
-// • B-TREE-CREATE,
-//• B-TREE-SPLIT-CHILD,
-//• B-TREE-INSERT, (10 marks)
-//• B-TREE-INSERT-NONFULL,
-//• B-TREE-SEARCH, (5 marks)
-//• B-TREE-MIN, (2 marks)
-//• B-TREE-INORDER-TRAVERSE: this should traverse the B-tree and
+// â€¢ B-TREE-CREATE,
+//â€¢ B-TREE-SPLIT-CHILD,
+//â€¢ B-TREE-INSERT, (10 marks)
+//â€¢ B-TREE-INSERT-NONFULL,
+//â€¢ B-TREE-SEARCH, (5 marks)
+//â€¢ B-TREE-MIN, (2 marks)
+//â€¢ B-TREE-INORDER-TRAVERSE: this should traverse the B-tree and
 //prints the keys of the B-tree in sorted order. (3 marks)
 #include <stdio.h>
 #include <stdlib.h>
@@ -31,7 +31,7 @@ struct btree* create_tree(int tt){
 }
 
 // function to create nodes of btree
-//• B-TREE-CREATE
+//â€¢ B-TREE-CREATE
 btreeNode* create_node(struct btree* T){
     int t=T->t;
 	btreeNode* x;
@@ -42,7 +42,7 @@ btreeNode* create_node(struct btree* T){
 	x->n=0;
 	return x;
 }
-//• B-TREE-SPLIT-CHILD,
+//â€¢ B-TREE-SPLIT-CHILD,
 void split_child(btreeNode* x, int i,struct btree* T){
 	int t=T->t;
 	btreeNode* z;
@@ -73,7 +73,7 @@ void split_child(btreeNode* x, int i,struct btree* T){
 	
 	
 }
-//• B-TREE-INSERT-NONFULL,
+//â€¢ B-TREE-INSERT-NONFULL,
 
 void insert_non_full(btreeNode* x,int k,struct btree* T){
 	int t=T->t;
@@ -101,7 +101,7 @@ void insert_non_full(btreeNode* x,int k,struct btree* T){
 		insert_non_full(x->C[i],k,T);
 	}
 }
-//• B-TREE-INSERT
+//â€¢ B-TREE-INSERT
 btreeNode* insert(int k,struct btree* T){
 	btreeNode* r=T->root;
 	btreeNode* s;
@@ -127,7 +127,7 @@ btreeNode* insert(int k,struct btree* T){
     }
 	return T->root;
 }
-//• B-TREE-INORDER-TRAVERSE:
+//â€¢ B-TREE-INORDER-TRAVERSE:
 void InOrder(btreeNode* r){
 	
 	int i;
@@ -144,7 +144,7 @@ void InOrder(btreeNode* r){
     }
 	
 }
-//• B-TREE-SEARCH,
+//â€¢ B-TREE-SEARCH,
 int BTree_Search(int k,btreeNode* r){
 	int i=0;
 	while(i<r->n && k>r->keys[i] )i++;
@@ -154,7 +154,7 @@ int BTree_Search(int k,btreeNode* r){
 	else if(r->leaf==1)return 0;
 	return BTree_Search(k,r->C[i]);
 }
-//• B-TREE-MIN
+//â€¢ B-TREE-MIN
 int minimum_btree(btreeNode* r){
 	if( r==NULL ){
 		printf("Empty tree\n");
@@ -267,3 +267,4 @@ int main(){
   
 	
 }
+// hello monu
